@@ -187,6 +187,12 @@ app.post('/multiply', (req, res) => {
         res.end();
         return;
     }
+    
+    if (multiply > 1000000) {
+        res.send(getErrorResponse('Overflow'));
+        res.end();
+        return;
+    }
 
     res.send(getResponse('The product of given numbers', multiply));
     res.end();
