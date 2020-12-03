@@ -137,15 +137,15 @@ app.post('/sub', (req, res) => {
 
     let sub = body.num1 - body.num2;
 
-    if (sub < -1000000) {
-        res.send({
-            status: 'error',
-            message: 'Underflow',
-            difference: null,
-        });
-        res.end();
-        return;
-    }
+//     if (sub < -1000000) {
+//         res.send({
+//             status: 'error',
+//             message: 'Underflow',
+//             difference: null,
+//         });
+//         res.end();
+//         return;
+//     }
     
     res.send({
         status: 'success',
